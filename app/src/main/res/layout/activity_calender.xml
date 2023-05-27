@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".calender">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나는 캘린더입니다."/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
