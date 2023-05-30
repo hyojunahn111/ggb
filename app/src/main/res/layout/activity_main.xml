@@ -7,12 +7,26 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:hint="달 날짜"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:hint="달 날짜"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/conbt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="입력"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -85,12 +99,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="132dp"
-        android:text="일 최대 사용 설정(상한)" />
-
 
 </LinearLayout>

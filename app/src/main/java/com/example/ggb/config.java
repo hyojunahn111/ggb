@@ -14,6 +14,16 @@ public class config extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
 
+        Button conbt = (Button) findViewById(R.id.conbt);
+        conbt.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), config.class);
+                startActivity(intent);
+            }
+        });
+
         Button weekbtn = (Button) findViewById(R.id.weekbt);
         weekbtn.setOnClickListener(new View.OnClickListener() {
 
