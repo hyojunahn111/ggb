@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -17,16 +18,20 @@ import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import android.widget.ListView;
 
 public class month extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private MonthAdapter adapter;
 
+    ArrayList<MonthData> MonthList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_month);
+        
 
         Button conbt = (Button) findViewById(R.id.conbt);
         conbt.setOnClickListener(new View.OnClickListener() {
@@ -78,38 +83,19 @@ public class month extends AppCompatActivity {
             }
         });
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        this.InitializeMovieData();
+        ListView listMonth = (ListView)findViewById(R.id.listMonth);
+        final MonthAdapter myAdapter = new MonthAdapter(this,MonthList);
+        listMonth.setAdapter(myAdapter);
 
+    }
+    public void InitializeMovieData()
+    {
+        MonthList = new ArrayList<MonthData>();
 
-        // 한 달의 요일 배열 가져오기
-        String[] dayOfWeeks = new DateFormatSymbols().getShortWeekdays();
-
-        // 현재 달의 첫 번째 날짜와 마지막 날짜를 가져옴
-        Calendar calendar = Calendar.getInstance();
-        int currentMonth = calendar.get(Calendar.MONTH);
-        calendar.set(Calendar.DAY_OF_MONTH, 1);
-        int firstDayOfMonth = calendar.get(Calendar.DAY_OF_WEEK);
-        int lastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-
-        List<String> dateList = new ArrayList<>();
-
-        // 요일 추가
-        for (int i = 1; i <= 7; i++) {
-            dateList.add(dayOfWeeks[i]);
-        }
-
-        // 공백 추가
-        for (int i = 1; i < firstDayOfMonth; i++) {
-            dateList.add("");
-        }
-
-        // 날짜 추가
-        for (int i = 1; i <= lastDayOfMonth; i++) {
-            dateList.add(String.valueOf(i));
-        }
-
-        adapter = new MonthAdapter(dateList);
-        recyclerView.setAdapter(adapter);
+        MonthList.add(new MonthData("5월", "수입: 1000", "지출: 300", "합계: 700" ));
+        MonthList.add(new MonthData("6월","","",""));
+        MonthList.add(new MonthData("7월","","",""));
+        MonthList.add(new MonthData("8월","","",""));
     }
 }

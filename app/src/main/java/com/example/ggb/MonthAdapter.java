@@ -1,49 +1,58 @@
 package com.example.ggb;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
 
-import java.util.List;
+public class MonthAdapter extends BaseAdapter {
 
-public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.ViewHolder> {
+    Context mContext =null;
+    LayoutInflater mLayoutInflater= null;
+    ArrayList<MonthData> monthData;
 
-    private List<String> dateList;
+    public MonthAdapter(Context mContext, ArrayList<MonthData> data)
+    {
+        this.mContext=mContext;
+        monthData=data;
+        mLayoutInflater=LayoutInflater.from(mContext);
 
-    public MonthAdapter(List<String> dateList) {
-        this.dateList = dateList;
-    }
-
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_date, parent, false);
-        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String date = dateList.get(position);
-        holder.textView.setText(date);
+    public int getCount() {
+        return monthData.size();
     }
 
     @Override
-    public int getItemCount() {
-        return dateList.size();
+    public Object getItem(int position) {
+        return monthData.get(position);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textView;
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            textView = itemView.findViewById(R.id.dateTextView);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view = mLayoutInflater.inflate(R.layout.month_item, null);
 
-        }
+        TextView month = (TextView)view.findViewById(R.id.month);
+        TextView income = (TextView)view.findViewById(R.id.income);
+        TextView expenditure = (TextView)view.findViewById(R.id.expenditure);
+        TextView sum = (TextView)view.findViewById(R.id.sum);
+
+        month.setText(monthData.get(position).getMonth());
+        income.setText(monthData.get(position).getIncome());
+        expenditure.setText(monthData.get(position).getExpenditure());
+        sum.setText(monthData.get(position).getSum());
+
+
+        return view;
     }
 }
-
