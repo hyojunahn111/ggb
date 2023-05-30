@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="332dp"
+            android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:hint="달 날짜"
             android:textAlignment="center"
