@@ -68,9 +68,10 @@
             android:id="@+id/incomeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="수입을 입력하세요 : "
             android:layout_weight="1"
-            android:inputType="numberDecimal"/>
+            android:hint="수입을 입력하세요 : "
+            android:inputType="numberDecimal"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/incomeconbt"
