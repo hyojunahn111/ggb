@@ -45,8 +45,18 @@ public class MainActivity extends AppCompatActivity {
         String incomeText = incomeTextView.getText().toString();
         String expenseText = expenseTextView.getText().toString();
 
-        double income = Double.parseDouble(incomeText.replace("총 수입: ", ""));
-        double expense = Double.parseDouble(expenseText.replace("총 지출 : ", ""));
+        double income = 0.0;
+        double expense = 0.0;
+
+        if (incomeText.startsWith("총 수입: ")) {
+            String incomeValue = incomeText.replace("총 수입: ", "");
+            income = Double.parseDouble(incomeValue);
+        }
+
+        if (expenseText.startsWith("총 지출 : ")) {
+            String expenseValue = expenseText.replace("총 지출 : ", "");
+            expense = Double.parseDouble(expenseValue);
+        }
         double result = income - expense;
 
         int roundedResult = (int) result;
