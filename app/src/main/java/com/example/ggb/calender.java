@@ -1,3 +1,5 @@
+// calender.java
+
 package com.example.ggb;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -81,6 +83,9 @@ public class calender extends AppCompatActivity {
 
         calendarGridView = findViewById(R.id.calendarGridView);
         TextView monthYearTextView = findViewById(R.id.monthYearTextView);
+        TextView incomeTextView = findViewById(R.id.incomeTextView);
+        TextView expenseTextView = findViewById(R.id.expenseTextView);
+        TextView totalTextView = findViewById(R.id.totalTextView);
 
         dates = new ArrayList<>();
         monthYearFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
@@ -96,28 +101,31 @@ public class calender extends AppCompatActivity {
         calendarGridView.setAdapter(calendarAdapter);
 
         monthYearTextView.setText(monthYearFormat.format(calendar.getTime()));
+
+        // 수정: week.java에서 전달된 DB 정보를 받아온다.
+        Intent intent = getIntent();
+        ArrayList<String> dbData = intent.getStringArrayListExtra("dbData");
+        if (dbData != null && dbData.size() >= 3) {
+            incomeTextView.setText(dbData.get(0));
+            expenseTextView.setText(dbData.get(1));
+            totalTextView.setText(dbData.get(2));
+        }
     }
 
     private void generateCalendar(Calendar calendar) {
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         int monthDays = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        int firstDayOfMonth = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+        int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
 
-        calendar.add(Calendar.DAY_OF_MONTH, -firstDayOfMonth);
+        calendar.add(Calendar.DAY_OF_MONTH, -firstDayOfWeek);
 
-        dates.clear();
-        for (int i = 0; i < 42; i++) {
+        while (dates.size() < 42) {
             dates.add(calendar.getTime());
-            calendar.add(Calendar.DAY_OF_MONTH, 1);
-        }
-    }
 
-    // 예산 항목을 설정하는 메서드
-    public void setExpenseList(ArrayList<String> expenseList) {
-        this.expenseList = expenseList;
-        if (calendarAdapter != null) {
-            calendarAdapter.setExpenseList(expenseList);
-            calendarAdapter.notifyDataSetChanged();
+            // 수정: 지출 정보를 expenseList에 추가한다.
+            expenseList.add("0"); // 기본값으로 0을 추가. 실제 데이터로 대체 필요.
+
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
     }
 }

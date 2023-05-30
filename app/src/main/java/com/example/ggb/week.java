@@ -29,11 +29,18 @@ public class week extends AppCompatActivity {
     private ArrayList<String> expenseList;
     private ArrayAdapter<String> adapter;
     private ExpenseDBHelper dbHelper;
+    private TextView expenseTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week);
+
+        expenseTextView = findViewById(R.id.expenseTextView);
+        dbHelper = new ExpenseDBHelper(this);
+
+        int totalExpense = dbHelper.getTotalExpense();
+        expenseTextView.setText("총 지출 : " + totalExpense);
 
         Button conbt = (Button) findViewById(R.id.conbt);
         conbt.setOnClickListener(new View.OnClickListener() {
@@ -185,6 +192,7 @@ public class week extends AppCompatActivity {
         }
 
         cursor.close();
+
     }
 
     private void deleteExpense(int position) {

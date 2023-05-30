@@ -1,6 +1,7 @@
 package com.example.ggb;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -31,4 +32,21 @@ public class ExpenseDBHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
+
+    public int getTotalExpense() {
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT SUM(" + ExpenseContract.ExpenseEntry.COLUMN_EXPENSE + ") FROM " +
+                ExpenseContract.ExpenseEntry.TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query, null);
+        int totalExpense = 0;
+
+        if (cursor.moveToFirst()) {
+            totalExpense = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return totalExpense;
+    }
+
 }
