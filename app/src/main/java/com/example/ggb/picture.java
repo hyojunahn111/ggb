@@ -18,6 +18,7 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import android.graphics.Color;
 
 public class picture extends AppCompatActivity {
 
@@ -60,8 +61,10 @@ public class picture extends AppCompatActivity {
         entries.add(new PieEntry((float) totalExpense, "지출"));
 
         PieDataSet dataSet = new PieDataSet(entries, "");
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         dataSet.setValueTextSize(12f);
+
+        int[] colors = {Color.RED, Color.BLUE};
+        dataSet.setColors(colors);
 
         PieData data = new PieData(dataSet);
 
