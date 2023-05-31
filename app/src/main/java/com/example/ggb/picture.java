@@ -1,14 +1,23 @@
 package com.example.ggb;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 public class picture extends AppCompatActivity {
 
@@ -45,6 +54,27 @@ public class picture extends AppCompatActivity {
         double totalResult = totalIncome - totalExpense;
         DecimalFormat resultFormat = new DecimalFormat("####");
         resultTextView.setText("총 합계 : " + resultFormat.format(totalResult));
+
+        List<PieEntry> entries = new ArrayList<>();
+        entries.add(new PieEntry((float) totalIncome, "수입"));
+        entries.add(new PieEntry((float) totalExpense, "지출"));
+
+        PieDataSet dataSet = new PieDataSet(entries, "");
+        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        dataSet.setValueTextSize(12f);
+
+        PieData data = new PieData(dataSet);
+
+        // 원형 그래프 설정
+        PieChart pieChart = findViewById(R.id.pieChart);
+        pieChart.setData(data);
+        pieChart.setUsePercentValues(true);
+        pieChart.getDescription().setEnabled(false);
+        pieChart.setDrawEntryLabels(false);
+        pieChart.setDrawHoleEnabled(true);
+        pieChart.setHoleRadius(30f);
+        pieChart.setTransparentCircleRadius(40f);
+        pieChart.invalidate();
 
         Button conbt = (Button) findViewById(R.id.conbt);
         conbt.setOnClickListener(new View.OnClickListener() {
