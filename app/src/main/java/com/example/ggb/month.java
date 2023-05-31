@@ -121,9 +121,17 @@ public class month extends AppCompatActivity {
     {
         MonthList = new ArrayList<MonthData>();
 
-        MonthList.add(new MonthData("5월", "수입: 1000", "지출: 300", "합계: 700" ));
-        MonthList.add(new MonthData("6월","","",""));
-        MonthList.add(new MonthData("7월","","",""));
-        MonthList.add(new MonthData("8월","","",""));
+        MonthList.add(new MonthData("1월", "수입: 0", "지출: 0", "합계: 0" ));
+        MonthList.add(new MonthData("2월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("3월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("4월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("5월", "수입: 0", "지출: 0", "합계: 0" ));
+        MonthList.add(new MonthData("6월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("7월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("8월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("9월", "수입: 0", "지출: 0", "합계: 0" ));
+        MonthList.add(new MonthData("10월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("11월","수입: 0","지출: 0","합계: 0"));
+        MonthList.add(new MonthData("12월","수입: 0","지출: 0","합계: 0"));
     }
 }
