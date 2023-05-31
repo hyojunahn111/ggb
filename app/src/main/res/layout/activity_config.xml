@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".config"
+    tools:context=".Config"
     android:orientation="vertical">
 
     <LinearLayout
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="332dp"
             android:layout_height="wrap_content"
-            android:hint="달 날짜"
+            android:hint=""
             android:textAlignment="center"
             android:textSize="30dp" />
 
@@ -66,9 +66,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/incomeTextView"
                 android:padding="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,6 +79,7 @@
                 android:layout_weight="1"/>
 
             <TextView
+                android:id="@+id/expenseTextView"
                 android:padding="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,6 +89,7 @@
                 android:layout_weight="1"/>
 
             <TextView
+                android:id="@+id/resultTextView"
                 android:padding="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -117,21 +120,24 @@
             android:hint="일 최대 사용 설정(상한)"
             android:padding="20dp"
             android:textAlignment="center"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:inputType="numberDecimal"/>
 
         <Button
             android:id="@+id/conSelBt"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="확인"
-            android:textSize="20dp"
+            android:textSize="15dp"
+            android:layout_weight="1"
             />
         <Button
             android:id="@+id/conRemBt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="삭제"
-            android:textSize="20dp"
+            android:textSize="15dp"
+            android:layout_weight="1"
             />
     </LinearLayout>
 

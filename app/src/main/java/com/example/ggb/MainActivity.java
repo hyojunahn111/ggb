@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         double income = 0.0;
         double expense = 0.0;
 
-       /* if (incomeText.startsWith("총 수입: ")) {
+        if (incomeText.startsWith("총 수입: ")) {
             String incomeValue = incomeText.replace("총 수입: ", "");
             income = Double.parseDouble(incomeValue);
         }
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         if (expenseText.startsWith("총 지출 : ")) {
             String expenseValue = expenseText.replace("총 지출 : ", "");
             expense = Double.parseDouble(expenseValue);
-        }*/
+        }
         double result = income - expense;
 
         int roundedResult = (int) result;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), config.class);
+                Intent intent = new Intent(getApplicationContext(), Config.class);
                 startActivity(intent);
             }
         });

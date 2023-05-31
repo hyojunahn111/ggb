@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="287dp"
             android:layout_height="wrap_content"
-            android:hint="달 날짜"
+            android:hint=""
             android:textAlignment="center"
             android:textSize="30dp" />
 
@@ -67,9 +67,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/incomeTextView"
                 android:padding="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -89,6 +90,7 @@
                 android:layout_weight="1"/>
 
             <TextView
+                android:id="@+id/resultTextView"
                 android:padding="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -150,221 +152,4 @@
             android:text="추가" />
 
     </LinearLayout>
-
-    <!--<ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일 : "
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입"
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="요일"
-                    android:textSize="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수입 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지출 : "
-                    android:textSize="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="합계 : "
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <View style="@style/Divider"/>
-
-        </LinearLayout>
-    </ScrollView>-->
-
 </LinearLayout>

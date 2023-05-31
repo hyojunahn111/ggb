@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.example.ggb.R;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
