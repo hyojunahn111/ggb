@@ -17,13 +17,17 @@
             android:layout_height="wrap_content"
             android:hint=""
             android:textAlignment="center"
-            android:textSize="30dp" />
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp" />
 
         <Button
             android:id="@+id/conbt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="#527afb"
             android:text="입력"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -36,25 +40,37 @@
             android:id="@+id/weekbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="주별"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/calbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="달력"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/monthbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="월별"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/picbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="그림"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -74,7 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 수입 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
@@ -84,7 +101,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 지출 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
@@ -94,7 +112,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 합계 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
@@ -120,23 +139,28 @@
             android:hint="일 최대 사용 설정(상한)"
             android:padding="20dp"
             android:textAlignment="center"
-            android:textSize="20dp"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
             android:inputType="numberDecimal"/>
 
         <Button
             android:id="@+id/conSelBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="확인"
-            android:textSize="15dp"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
             android:layout_weight="1"
             />
         <Button
             android:id="@+id/conRemBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
             android:text="삭제"
-            android:textSize="15dp"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
             android:layout_weight="1"
             />
     </LinearLayout>

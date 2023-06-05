@@ -17,12 +17,16 @@
             android:layout_height="wrap_content"
             android:hint=""
             android:textAlignment="center"
-            android:textSize="30dp" />
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp" />
 
         <Button
             android:id="@+id/conbt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:text="입력"
             android:layout_weight="1"/>
 
@@ -36,24 +40,36 @@
             android:id="@+id/weekbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:text="주별"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/calbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:text="달력"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/monthbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:text="월별"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/picbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
             android:text="그림"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -74,7 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 수입 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
@@ -84,7 +101,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 지출 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
@@ -94,7 +112,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="총 합계 : "
-                android:textSize="22dp"
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_weight="1"/>
 
