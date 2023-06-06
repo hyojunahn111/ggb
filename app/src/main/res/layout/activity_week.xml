@@ -141,6 +141,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:background="#d3d3d3"
         android:fontFamily="@font/mainfont"
         android:layout_weight="1" />
 
