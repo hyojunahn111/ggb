@@ -15,6 +15,7 @@
         <TextView
             android:layout_width="332dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gangwon"
             android:hint=""
             android:textAlignment="center"
             android:textSize="30dp" />
@@ -23,8 +24,11 @@
             android:id="@+id/conbt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="입력"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#527AFB"
+            android:fontFamily="@font/font_1"
+            android:textSize="14sp"
+            android:text="입력" />
 
     </LinearLayout>
 
@@ -32,30 +36,42 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/weekbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="주별"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
+            android:text="주별" />
+
         <Button
             android:id="@+id/calbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="달력"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
+            android:text="달력" />
+
         <Button
             android:id="@+id/monthbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="월별"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
+            android:text="월별" />
+
         <Button
             android:id="@+id/picbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="그림"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
+            android:text="그림" />
     </LinearLayout>
 
     <LinearLayout

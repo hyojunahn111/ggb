@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Ggb" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/s_blue</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,7 +12,32 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:editTextStyle">@style/customEditTextFontStyle</item>
+        <item name="android:radioButtonStyle">@style/customRadioButtonFontStyle</item>
+        <item name="android:checkboxStyle">@style/customCheckboxFontStyle</item>
+
+        <item name="android:textViewStyle">@style/font1TextView</item>
+
+        <item name="android:buttonStyle">@style/font1Button</item>
+
+
+
     </style>
+
+    <style name="font1TextView" parent="android:Widget.TextView">
+
+        <item name="android:fontFamily">@font/font_1</item>
+
+    </style>
+
+
+
+    <style name="font1Button" parent="android:Widget.Button">
+
+        <item name="android:fontFamily">@font/font_1</item>
+
+    </style>
+
 
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
@@ -20,5 +45,6 @@
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
+    <color name="s_blue">#527afb</color>
     <color name="gray">#808080</color>
 </resources>

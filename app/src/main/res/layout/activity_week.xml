@@ -25,6 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/font_1"
+            android:textSize="14sp"
             android:text="입력" />
 
     </LinearLayout>
@@ -38,24 +40,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="주별"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/calbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="달력"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/monthbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="월별"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/picbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="그림"
+            android:fontFamily="@font/font_1"
+            android:textSize="18sp"
             android:layout_weight="1"/>
     </LinearLayout>
 
