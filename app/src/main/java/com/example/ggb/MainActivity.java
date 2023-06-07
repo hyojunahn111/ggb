@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 saveIncome();
             }
         });
-
+        
         Button conbt = (Button) findViewById(R.id.conbt);
         conbt.setOnClickListener(new View.OnClickListener() {
 
