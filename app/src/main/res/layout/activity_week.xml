@@ -1,9 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".week">
+    tools:context=".week"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:textAlignment="center"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp" />
+
+        <Button
+            android:id="@+id/conbt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#527afb"
+            android:text="입력"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/weekbt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:text="주별"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/calbt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:text="달력"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/monthbt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:text="월별"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/picbt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:text="그림"
+            android:fontFamily="@font/mainfont"
+            android:textSize="38dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/incomeTextView"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="총 수입 : "
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/expenseTextView"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="총 지출 : "
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="총 합계 : "
+                android:fontFamily="@font/mainfont"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#d3d3d3"
+        android:fontFamily="@font/mainfont"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/itemEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
+            android:hint="물품 입력" />
+
+        <EditText
+            android:id="@+id/expenseEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="금액 입력"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#527afb"
+            android:fontFamily="@font/mainfont"
+            android:textSize="30dp"
+            android:text="추가" />
+
+    </LinearLayout>
+</LinearLayout>

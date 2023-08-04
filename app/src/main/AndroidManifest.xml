@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ggb"
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -12,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ggb"
         tools:targetApi="31">
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name=".picture"
             android:exported="false">
@@ -35,6 +42,13 @@
         </activity>
         <activity
             android:name=".week"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Config"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
